@@ -53,16 +53,16 @@ function drawTime(ctx, radius){
     var hour = now.getHours();
     var minute = now.getMinutes();
     var second = now.getSeconds();
-    //hour
+    //horas
     hour=hour%12;
     hour=(hour*Math.PI/6)+
     (minute*Math.PI/(6*60))+
     (second*Math.PI/(360*60));
     drawHand(ctx, hour, radius*0.5, radius*0.07);
-    //minute
+    //minutos
     minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
     drawHand(ctx, minute, radius*0.8, radius*0.07);
-    // second
+    // segundos
     second=(second*Math.PI/30);
     drawHand(ctx, second, radius*0.9, radius*0.02);
 }
